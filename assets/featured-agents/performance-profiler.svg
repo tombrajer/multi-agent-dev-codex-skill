@@ -1,0 +1,17 @@
+<svg width="420" height="170" viewBox="0 0 420 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="18" y1="12" x2="402" y2="158" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FDFF"/>
+      <stop offset="1" stop-color="#E8F4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="170" rx="18" fill="url(#bg)"/>
+  <rect x="14" y="14" width="392" height="142" rx="14" fill="#FFFFFF" stroke="#BAE6FD"/>
+  <rect x="30" y="30" width="74" height="8" rx="4" fill="#06B6D4"/>
+  <text x="30" y="62" fill="#0891B2" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">performance-profiler</text>
+  <text x="30" y="95" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Spot bottlenecks</text>
+  <text x="30" y="123" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="16">hot paths, waste, slow queries, runtime cost</text>
+  <circle cx="370" cy="48" r="18" fill="#E0F2FE"/>
+  <path d="M370 58V49L376 43" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="370" cy="49" r="9" stroke="#2563EB" stroke-width="3"/>
+</svg>
