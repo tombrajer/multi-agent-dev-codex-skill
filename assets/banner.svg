@@ -1,0 +1,66 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-Agent Dev banner</title>
+  <desc id="desc">Modern tech banner for the Multi-Agent Dev Codex skill.</desc>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="32" x2="1160" y2="304" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#E8F4FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="843" y1="48" x2="1148" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="line" x1="242" y1="64" x2="919" y2="259" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93C5FD" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur" x="716" y="31" width="489" height="259" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="18" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="320" rx="28" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1232" height="272" rx="24" stroke="#D7E8FF"/>
+
+  <circle cx="112" cy="96" r="66" fill="#DBEAFE"/>
+  <circle cx="112" cy="96" r="42" fill="#BFDBFE"/>
+  <path d="M110 58L127 90H93L110 58Z" fill="#0F172A"/>
+  <path d="M110 136L93 104H127L110 136Z" fill="#0F172A"/>
+  <circle cx="110" cy="97" r="12" fill="#2563EB"/>
+
+  <path d="M218 86C318 54 413 45 516 59C623 74 732 109 857 107C951 105 1026 76 1102 46" stroke="url(#line)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M228 118C332 94 427 95 521 124C621 154 718 202 838 205C930 208 1009 183 1086 145" stroke="#C7DDFC" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14"/>
+  <path d="M224 152C333 145 424 163 514 193C621 229 723 259 833 251C919 246 991 219 1060 187" stroke="#D4EEFF" stroke-width="4" stroke-linecap="round"/>
+
+  <g filter="url(#blur)" opacity="0.75">
+    <path d="M842 66C915 27 1012 48 1061 118C1114 194 1113 276 1008 266C933 260 837 215 816 143C807 113 813 82 842 66Z" fill="url(#accent)"/>
+  </g>
+
+  <rect x="853" y="88" width="228" height="136" rx="22" fill="#0F172A" fill-opacity="0.92"/>
+  <rect x="881" y="117" width="118" height="10" rx="5" fill="#60A5FA"/>
+  <rect x="881" y="141" width="171" height="10" rx="5" fill="#E0F2FE"/>
+  <rect x="881" y="165" width="140" height="10" rx="5" fill="#C4B5FD"/>
+  <rect x="881" y="189" width="94" height="10" rx="5" fill="#67E8F9"/>
+
+  <circle cx="1115" cy="84" r="17" fill="#0F172A"/>
+  <path d="M1108 84H1122" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1115 77V91" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="228" y="162" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="-1.8">
+    Multi-Agent Dev
+  </text>
+  <text x="230" y="201" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="500">
+    Codex skill for senior-dev-style specialist workflows
+  </text>
+
+  <rect x="229" y="228" width="188" height="34" rx="17" fill="#EFF6FF"/>
+  <text x="252" y="250" fill="#2563EB" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">
+    natural-language first
+  </text>
+  <rect x="429" y="228" width="160" height="34" rx="17" fill="#ECFEFF"/>
+  <text x="453" y="250" fill="#0891B2" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">
+    16 specialist roles
+  </text>
+</svg>
