@@ -12,43 +12,7 @@ Natural-language first. Senior-dev-style roles. One skill, sixteen specialists, 
 
 ## Jump To
 
-[Quickstart](#quickstart) | [Featured Agents](#featured-agents) | [Installation](#installation) | [Invocation](#invocation) | [All Agents](#all-agents) | [Workflows](#recommended-workflows)
-
-## Quickstart
-
-| Start here | Use when | Prompt |
-| --- | --- | --- |
-| Help | Need orientation | `Use the multi-agent-dev skill. Help me understand what each agent does and which one I should use.` |
-| Inspect | Need fast repo mapping | `Use the multi-agent-dev skill. Run repo-intake only. Do not edit files. Map the project and identify the correct commands.` |
-| Review | Need eyes on current changes | `Use the multi-agent-dev skill. Run diff-reviewer and test-engineer. Review the current git diff. Do not edit files.` |
-| Fix | Need one issue solved carefully | `Use the multi-agent-dev skill. Run implementation-minimalist and test-engineer. Fix finding #1 only. Keep the change minimal.` |
-
-## Featured Agents
-
-<table>
-  <tr>
-    <td valign="top" width="33%">
-      <img alt="repo-intake featured card" src="./assets/featured-agents/repo-intake.svg" />
-    </td>
-    <td valign="top" width="33%">
-      <img alt="bug-hunter featured card" src="./assets/featured-agents/bug-hunter.svg" />
-    </td>
-    <td valign="top" width="33%">
-      <img alt="security-reviewer featured card" src="./assets/featured-agents/security-reviewer.svg" />
-    </td>
-  </tr>
-  <tr>
-    <td valign="top" width="33%">
-      <img alt="test-engineer featured card" src="./assets/featured-agents/test-engineer.svg" />
-    </td>
-    <td valign="top" width="33%">
-      <img alt="performance-profiler featured card" src="./assets/featured-agents/performance-profiler.svg" />
-    </td>
-    <td valign="top" width="33%">
-      <img alt="workflow-strategist featured card" src="./assets/featured-agents/workflow-strategist.svg" />
-    </td>
-  </tr>
-</table>
+[Installation](#installation) | [Quickstart](#quickstart) | [How it thinks](#how-it-thinks) | [All Agents](#all-agents) | [Invocation](#invocation) | [Workflows](#recommended-workflows)
 
 ## Installation
 
@@ -69,6 +33,54 @@ cp -R ./skills/multi-agent-dev ~/.codex/skills/multi-agent-dev
 ```
 
 Restart Codex CLI / reload VS Code Codex extension after installing.
+
+## Quickstart
+
+| Start here | Use when | Prompt |
+| --- | --- | --- |
+| Help | Need orientation | `Use the multi-agent-dev skill. Help me understand what each agent does and which one I should use.` |
+| Inspect | Need fast repo mapping | `Use the multi-agent-dev skill. Run repo-intake only. Do not edit files. Map the project and identify the correct commands.` |
+| Review | Need eyes on current changes | `Use the multi-agent-dev skill. Run diff-reviewer and test-engineer. Review the current git diff. Do not edit files.` |
+| Fix | Need one issue solved carefully | `Use the multi-agent-dev skill. Run implementation-minimalist and test-engineer. Fix finding #1 only. Keep the change minimal.` |
+
+## How it thinks
+
+```text
+                               ┌───────────────────────┐
+                               │   multi-agent-dev     │
+                               │     Codex Skill       │
+                               └───────────┬───────────┘
+                                           │
+               ────────────────────────────┼────────────────────────────
+                      │                    │                     │
+                      │                    │                     │
+                 Reviewers              Fixers             Strategists
+                 bug-hunter             implementation-    workflow-strategist
+                 security-reviewer      minimalist         final-merge-reviewer
+                 performance-profiler   test-engineer
+                 architect-reviewer
+```
+
+## All Agents
+
+| Agent | Focus |
+| --- | --- |
+| `repo-intake` | Map repo shape, commands, risks, and working constraints before deeper work. |
+| `codebase-cartographer` | Trace code paths, ownership boundaries, and subsystem relationships. |
+| `bug-hunter` | Find highest-probability defects and rank them by severity and evidence. |
+| `frontend-debugger` | Investigate browser/UI issues with DOM, network, console, and rendering evidence. |
+| `test-engineer` | Design, add, update, and validate targeted test coverage. |
+| `implementation-minimalist` | Fix one issue with smallest safe diff and low regression risk. |
+| `security-reviewer` | Inspect auth, permissions, validation, secrets, and exposure risks. |
+| `performance-profiler` | Look for hot paths, wasted work, slow queries, and runtime bottlenecks. |
+| `architect-reviewer` | Review structure, coupling, abstractions, and long-term maintainability. |
+| `docs-maintainer` | Improve docs, examples, onboarding guidance, and missing operational context. |
+| `accessibility-reviewer` | Check keyboard flow, semantics, contrast, labels, and assistive support. |
+| `workflow-strategist` | Triage findings, choose safest order, and recommend next workflow step. |
+| `diff-reviewer` | Review current diff for bugs, regressions, missing tests, and scope drift. |
+| `final-merge-reviewer` | Perform final pre-commit or pre-merge review across code, tests, and risks. |
+| `dependency-reviewer` | Audit packages for risk, drift, unnecessary weight, and upgrade concerns. |
+| `database-reviewer` | Review schema, queries, migrations, indexes, and data correctness risks. |
 
 ## Invocation
 
@@ -136,27 +148,6 @@ Run workflow-strategist only.
 Triage the previous findings and recommend the safest fix order.
 Do not edit files.
 ```
-
-## All Agents
-
-| Agent | Focus |
-| --- | --- |
-| `repo-intake` | Map repo shape, commands, risks, and working constraints before deeper work. |
-| `codebase-cartographer` | Trace code paths, ownership boundaries, and subsystem relationships. |
-| `bug-hunter` | Find highest-probability defects and rank them by severity and evidence. |
-| `frontend-debugger` | Investigate browser/UI issues with DOM, network, console, and rendering evidence. |
-| `test-engineer` | Design, add, update, and validate targeted test coverage. |
-| `implementation-minimalist` | Fix one issue with smallest safe diff and low regression risk. |
-| `security-reviewer` | Inspect auth, permissions, validation, secrets, and exposure risks. |
-| `performance-profiler` | Look for hot paths, wasted work, slow queries, and runtime bottlenecks. |
-| `architect-reviewer` | Review structure, coupling, abstractions, and long-term maintainability. |
-| `docs-maintainer` | Improve docs, examples, onboarding guidance, and missing operational context. |
-| `accessibility-reviewer` | Check keyboard flow, semantics, contrast, labels, and assistive support. |
-| `workflow-strategist` | Triage findings, choose safest order, and recommend next workflow step. |
-| `diff-reviewer` | Review current diff for bugs, regressions, missing tests, and scope drift. |
-| `final-merge-reviewer` | Perform final pre-commit or pre-merge review across code, tests, and risks. |
-| `dependency-reviewer` | Audit packages for risk, drift, unnecessary weight, and upgrade concerns. |
-| `database-reviewer` | Review schema, queries, migrations, indexes, and data correctness risks. |
 
 ## Recommended Workflows
 
