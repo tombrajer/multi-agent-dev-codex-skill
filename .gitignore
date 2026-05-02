@@ -1,0 +1,44 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.idea/
+.vscode/
+*.suo
+*.user
+*.userossc
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Node
+node_modules/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Build / dist
+build/
+dist/
+coverage/
+
+# Environment files
+.env
+.env.*
+
+# Local Codex / session artifacts
+.codex/
+.agents/
+*.codex-session
